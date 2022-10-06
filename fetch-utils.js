@@ -29,3 +29,19 @@ export async function signOutUser() {
 }
 
 /* Data functions */
+
+export async function uploadImage(bucketName, imagePath, imageFile) {
+    const drop = client.storage.from(bucketName);
+
+    const response = await drop.upload(imagePath, imageFile, {
+        cacheControl: '3600',
+        upsert: true,
+    });
+
+    if (response.error) {
+        return null;
+    }
+
+    const url = `${SUPABASE_URL}/storage/v1/object/public/${response.data.Key}`;
+    return url;
+}
