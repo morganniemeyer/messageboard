@@ -1,11 +1,11 @@
 :root {
-    --background: rgb(224, 234, 247);
-    --header-background: white;
-    --text-color: rgb(7, 5, 68);
-    --label-color: rgb(75, 102, 98);
-    --placeholder-color: rgb(136, 136, 153);
-    --offset-color: rgb(217, 236, 217);
-    --action-color: rgb(77, 132, 252);
+    --background: #ccd5ff;
+    --header-background: #faf0f9;
+    --text-color: #462032;
+    --label-color: #005c7a;
+    --placeholder-color: #23c9ff;
+    --offset-color: #9ad3fe;
+    --action-color: #eac3e7;
 
     --primary-font: 'Rubik', Corbel, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans',
         'DejaVu Sans', 'Bitstream Vera Sans', 'Liberation Sans', Verdana, 'Verdana Ref', sans-serif;
@@ -68,4 +68,12 @@ main {
 
 .hidden {
     display: none;
+}
+
+button {
+    border-radius: 8px;
+}
+
+input {
+    border-radius: 5px;
 }
