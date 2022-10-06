@@ -121,13 +121,14 @@ input {
 }
 
 .comment-holder {
-    display: grid;
+    display: flex;
     gap: 10px;
+    flex-direction: column;
 }
 
-.commentadd form {
+.commentadd {
     width: 100%;
-    display: grid;
+    display: flex;
     grid-template-columns: 1fr 90px;
     grid-gap: 5px;
     align-items: baseline;
@@ -156,4 +157,12 @@ form input {
 .post a {
     text-decoration: none;
     color: var(--text-color);
+}
+
+.single {
+    padding: 20px;
+    display: grid;
+    grid-template-rows: 1fr 55px 2fr;
+}
+.addholder {
 }

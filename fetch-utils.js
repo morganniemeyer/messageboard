@@ -53,3 +53,7 @@ export async function createRow(post) {
 export async function getPosts() {
     return await client.from('message').select('*');
 }
+
+export async function getPost(id) {
+    return await client.from('message').select('*').eq('id', id).single();
+}
