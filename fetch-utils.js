@@ -45,3 +45,7 @@ export async function uploadImage(bucketName, imagePath, imageFile) {
     const url = `${SUPABASE_URL}/storage/v1/object/public/${response.data.Key}`;
     return url;
 }
+
+export async function createRow(post) {
+    return await client.from('message').insert(post);
+}
