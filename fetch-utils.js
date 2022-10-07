@@ -57,3 +57,7 @@ export async function getPosts() {
 export async function getPost(id) {
     return await client.from('message').select('*').eq('id', id).single();
 }
+
+export async function createComment(commentUpload) {
+    return await client.from('comments').insert(commentUpload);
+}

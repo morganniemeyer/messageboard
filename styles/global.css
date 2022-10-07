@@ -162,7 +162,7 @@ form input {
 .single {
     padding: 20px;
     display: grid;
-    grid-template-rows: 1fr 55px 2fr;
+    grid-template-rows: 1fr 55px auto;
 }
 
 .bigpost img {
