@@ -24,3 +24,56 @@ Additional considerations:
     -   What needs to live in a persistence layer?
 -   Is there some state we need to initialize?
 -   Ask: should any of this work be abstracted into functions? (i.e., is the work complicated? can it be reused?)
+
+[planning doc](wireframe.jpg)
+
+## html req
+
+sign in page:
+
+this is pre-built, will just require css updates
+
+board page:
+
+add link make a post to header
+li item for each post containing:
+-h2 post title
+-p for body text
+-img
+
+add a new post page:
+form box
+-text input for title
+-text area for body of post
+-add an image
+-post button
+
+post w/ comments page
+top post, different formatting will be needed somehow?
+add a comment
+button
+rendered comments
+
+## functions
+
+uploadImage
+renderPost
+renderSinglePost
+dispPosts
+createPost
+getPosts
+renderComments
+
+## event listeners
+
+page load on board page
+-dispPosts
+
+page load on single post page
+-renderSinglePost
+-renderComments
+
+form listener on new post page
+-preview image option
+
+signin/out/up - already built
