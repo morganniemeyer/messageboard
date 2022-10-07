@@ -55,9 +55,13 @@ export async function getPosts() {
 }
 
 export async function getPost(id) {
-    return await client.from('message').select('*').eq('id', id).single();
+    return await client.from('message').select(`*, comments (*)`).eq('id', id).single();
 }
 
 export async function createComment(commentUpload) {
-    return await client.from('comments').insert(commentUpload);
+    return await client.from('comments').insert(commentUpload).single();
+}
+
+export async function getComments(id) {
+    return await client.from('comments').select('*').eq('post_id', id);
 }
